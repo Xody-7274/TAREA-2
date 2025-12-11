@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones Trigonométricas e Hiperbólicas Inversas - Ejercicio 30</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+    h1 {
+      color: #8B4513;
+      border-left: 5px solid #8B4513;
+      padding-left: 0.5rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #8B4513;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #8B4513;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .exercise {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #8B4513;
+      border-radius: 4px;
+    }
+    .math-container {
+      text-align: center;
+      margin: 15px 0;
+      padding: 10px 0;
+    }
+    .step {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+    }
+    .info-box {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      color: #856404;
+    }
+    .formula-box {
+      background-color: #f0f8ff;
+      border-left: 4px solid #4a90a4;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .result-box {
+      background: #e8f4f8;
+      border: 2px solid #4a90a4;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .part {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .part h3 {
+      margin-top: 0;
+    }
+    .multivalue-note {
+      background-color: #e7f3ff;
+      border-left: 4px solid #2196F3;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Complex Numbers and Functions. Complex Differentiation</h1>
+    <h2>Inverse Trigonometric and Hyperbolic Functions</h2>
+    <h2>Problem Set 13.7 - Autor: Martínez León Josué David</h2>
+
+    <div class="exercise">
+      <h3>Ejercicio 30: Funciones inversas trigonométricas e hiperbólicas</h3>
+      
+      <div class="info-box">
+        <strong>Nota:</strong> Las funciones inversas trigonométricas e hiperbólicas en el plano complejo son <em>multivaluadas</em> debido a la naturaleza multivaluada del logaritmo complejo.
+      </div>
+
+      <div class="formula-box">
+        <p><strong>Definiciones usadas:</strong></p>
+        <div class="math-container">
+          \[
+          \sin w = \frac{e^{iw} - e^{-iw}}{2i}, \quad 
+          \cos w = \frac{e^{iw} + e^{-iw}}{2}, \quad 
+          \tan w = \frac{\sin w}{\cos w}
+          \]
+        </div>
+        <div class="math-container">
+          \[
+          \sinh w = \frac{e^{w} - e^{-w}}{2}, \quad 
+          \cosh w = \frac{e^{w} + e^{-w}}{2}, \quad 
+          \tanh w = \frac{\sinh w}{\cosh w}
+          \]
+        </div>
+        <p>Las funciones inversas se definen por las relaciones:</p>
+        <div class="math-container">
+          \[
+          w = \arcsin z \ \text{si} \ \sin w = z, \quad
+          w = \arccos z \ \text{si} \ \cos w = z, \quad \text{etc.}
+          \]
+        </div>
+      </div>
+
+      <!-- Parte (a) -->
+      <div class="part">
+        <h3>(a) Demostrar: \(\displaystyle \arccos z = -i \ln(z + \sqrt{z^2 - 1})\)</h3>
+        
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de la definición \(w = \arccos z \Leftrightarrow \cos w = z\).</p>
+          <div class="math-container">
+            \[
+            \cos w = \frac{e^{iw} + e^{-iw}}{2} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Multiplicar por 2 y reorganizar.</p>
+          <div class="math-container">
+            \[
+            e^{iw} + e^{-iw} = 2z
+            \]
+            Multiplicando por \(e^{iw}\):
+            \[
+            e^{2iw} + 1 = 2z e^{iw}
+            \]
+            \[
+            e^{2iw} - 2z e^{iw} + 1 = 0
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 3:</strong> Resolver la ecuación cuadrática en \(e^{iw}\). Sea \(u = e^{iw}\):</p>
+          <div class="math-container">
+            \[
+            u^2 - 2z u + 1 = 0
+            \]
+            \[
+            u = \frac{2z \pm \sqrt{4z^2 - 4}}{2} = z \pm \sqrt{z^2 - 1}
+            \]
+            Por lo tanto,
+            \[
+            e^{iw} = z \pm \sqrt{z^2 - 1}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 4:</strong> Aplicar logaritmo y despejar \(w\).</p>
+          <div class="math-container">
+            \[
+            iw = \ln(z \pm \sqrt{z^2 - 1})
+            \]
+            \[
+            w = -i \ln(z \pm \sqrt{z^2 - 1})
+            \]
+          </div>
+          <p>Dado que el logaritmo complejo es multivaluado, la expresión con el signo \(\pm\) se cubre tomando todas las ramas del logaritmo. Por convención se escribe:</p>
+          <div class="result-box">
+            \[
+            \boxed{\arccos z = -i \ln(z + \sqrt{z^2 - 1})}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (b) -->
+      <div class="part">
+        <h3>(b) Demostrar: \(\displaystyle \arcsin z = -i \ln(iz + \sqrt{1 - z^2})\)</h3>
+        
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de \(w = \arcsin z \Leftrightarrow \sin w = z\).</p>
+          <div class="math-container">
+            \[
+            \sin w = \frac{e^{iw} - e^{-iw}}{2i} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Multiplicar por \(2i\) y reorganizar.</p>
+          <div class="math-container">
+            \[
+            e^{iw} - e^{-iw} = 2iz
+            \]
+            Multiplicando por \(e^{iw}\):
+            \[
+            e^{2iw} - 1 = 2iz e^{iw}
+            \]
+            \[
+            e^{2iw} - 2iz e^{iw} - 1 = 0
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 3:</strong> Resolver la ecuación cuadrática en \(e^{iw}\). Sea \(u = e^{iw}\):</p>
+          <div class="math-container">
+            \[
+            u^2 - 2iz u - 1 = 0
+            \]
+            \[
+            u = \frac{2iz \pm \sqrt{(2iz)^2 + 4}}{2} = \frac{2iz \pm \sqrt{-4z^2 + 4}}{2} = iz \pm \sqrt{1 - z^2}
+            \]
+            Por lo tanto,
+            \[
+            e^{iw} = iz \pm \sqrt{1 - z^2}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 4:</strong> Aplicar logaritmo y despejar \(w\).</p>
+          <div class="math-container">
+            \[
+            iw = \ln(iz \pm \sqrt{1 - z^2})
+            \]
+            \[
+            w = -i \ln(iz \pm \sqrt{1 - z^2})
+            \]
+          </div>
+          <div class="result-box">
+            \[
+            \boxed{\arcsin z = -i \ln(iz + \sqrt{1 - z^2})}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (c) -->
+      <div class="part">
+        <h3>(c) Demostrar: \(\displaystyle \text{arccosh } z = \ln(z + \sqrt{z^2 - 1})\)</h3>
+        
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de \(w = \text{arccosh } z \Leftrightarrow \cosh w = z\).</p>
+          <div class="math-container">
+            \[
+            \cosh w = \frac{e^{w} + e^{-w}}{2} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Proceder de manera análoga a (a), pero con exponenciales reales.</p>
+          <div class="math-container">
+            \[
+            e^{w} + e^{-w} = 2z
+            \]
+            \[
+            e^{2w} - 2z e^{w} + 1 = 0
+            \]
+            \[
+            e^{w} = z \pm \sqrt{z^2 - 1}
+            \]
+            \[
+            w = \ln(z \pm \sqrt{z^2 - 1})
+            \]
+          </div>
+          <div class="result-box">
+            \[
+            \boxed{\text{arccosh } z = \ln(z + \sqrt{z^2 - 1})}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (d) -->
+      <div class="part">
+        <h3>(d) Demostrar: \(\displaystyle \text{arcsinh } z = \ln(z + \sqrt{z^2 + 1})\)</h3>
+
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de \(w = \text{arcsinh } z \Leftrightarrow \sinh w = z\).</p>
+          <div class="math-container">
+            \[
+            \sinh w = \frac{e^{w} - e^{-w}}{2} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Proceder de manera análoga a (b), pero con exponenciales reales.</p>
+          <div class="math-container">
+            \[
+            e^{w} - e^{-w} = 2z
+            \]
+            \[
+            e^{2w} - 2z e^{w} - 1 = 0
+            \]
+            \[
+            e^{w} = z \pm \sqrt{z^2 + 1}
+            \]
+            \[
+            w = \ln(z \pm \sqrt{z^2 + 1})
+            \]
+          </div>
+          <div class="result-box">
+            \[
+            \boxed{\text{arcsinh } z = \ln(z + \sqrt{z^2 + 1})}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (e) -->
+      <div class="part">
+        <h3>(e) Demostrar: \(\displaystyle \arctan z = \frac{i}{2} \ln\frac{i + z}{i - z}\)</h3>
+        
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de \(w = \arctan z \Leftrightarrow \tan w = z\).</p>
+          <div class="math-container">
+            \[
+            \tan w = \frac{\sin w}{\cos w} = \frac{1}{i} \cdot \frac{e^{iw} - e^{-iw}}{e^{iw} + e^{-iw}} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Simplificar y despejar \(e^{2iw}\).</p>
+          <div class="math-container">
+            \[
+            \frac{e^{iw} - e^{-iw}}{e^{iw} + e^{-iw}} = iz
+            \]
+            Sea \(u = e^{2iw}\), entonces:
+            \[
+            \frac{u - 1}{u + 1} = iz
+            \]
+            \[
+            u - 1 = iz(u + 1)
+            \]
+            \[
+            u - 1 = iz u + iz
+            \]
+            \[
+            u - iz u = 1 + iz
+            \]
+            \[
+            u(1 - iz) = 1 + iz
+            \]
+            \[
+            u = \frac{1 + iz}{1 - iz}
+            \]
+            Multiplicando numerador y denominador por \(i\):
+            \[
+            u = \frac{i(1 + iz)}{i(1 - iz)} = \frac{i + i^2 z}{i - i^2 z} = \frac{i - z}{i + z}
+            \]
+            Por lo tanto,
+            \[
+            e^{2iw} = \frac{i - z}{i + z} \quad \Rightarrow \quad e^{-2iw} = \frac{i + z}{i - z}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 3:</strong> Aplicar logaritmo y despejar \(w\).</p>
+          <div class="math-container">
+            \[
+            -2iw = \ln\left(\frac{i + z}{i - z}\right)
+            \]
+            \[
+            w = -\frac{1}{2i} \ln\left(\frac{i + z}{i - z}\right) = \frac{i}{2} \ln\left(\frac{i + z}{i - z}\right)
+            \]
+          </div>
+          <div class="result-box">
+            \[
+            \boxed{\arctan z = \frac{i}{2} \ln\frac{i + z}{i - z}}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (f) -->
+      <div class="part">
+        <h3>(f) Demostrar: \(\displaystyle \text{arctanh } z = \frac{1}{2} \ln\frac{1 + z}{1 - z}\)</h3>
+
+        <div class="step">
+          <p><strong>Paso 1:</strong> Partir de \(w = \text{arctanh } z \Leftrightarrow \tanh w = z\).</p>
+          <div class="math-container">
+            \[
+            \tanh w = \frac{e^{w} - e^{-w}}{e^{w} + e^{-w}} = z
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Despejar \(e^{2w}\).</p>
+          <div class="math-container">
+            \[
+            e^{w} - e^{-w} = z(e^{w} + e^{-w})
+            \]
+            \[
+            e^{w} - e^{-w} = z e^{w} + z e^{-w}
+            \]
+            \[
+            e^{w} - z e^{w} = e^{-w} + z e^{-w}
+            \]
+            \[
+            e^{w}(1 - z) = e^{-w}(1 + z)
+            \]
+            \[
+            e^{2w} = \frac{1 + z}{1 - z}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 3:</strong> Aplicar logaritmo y despejar \(w\).</p>
+          <div class="math-container">
+            \[
+            2w = \ln\left(\frac{1 + z}{1 - z}\right)
+            \]
+            \[
+            w = \frac{1}{2} \ln\left(\frac{1 + z}{1 - z}\right)
+            \]
+          </div>
+          <div class="result-box">
+            \[
+            \boxed{\text{arctanh } z = \frac{1}{2} \ln\frac{1 + z}{1 - z}}
+            \]
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte (g) -->
+      <div class="part">
+        <h3>(g) Multivaluación de \(w = \arcsin z\)</h3>
+        
+        <div class="step">
+          <p><strong>Paso 1:</strong> Recordar la expresión de \(\arcsin z\) obtenida en (b):</p>
+          <div class="math-container">
+            \[
+            \arcsin z = -i \ln(iz + \sqrt{1 - z^2})
+            \]
+          </div>
+          <p>El logaritmo complejo es infinitamente multivaluado:</p>
+          <div class="math-container">
+            \[
+            \ln u = \ln|u| + i \arg u + 2k\pi i, \quad k \in \mathbb{Z}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 2:</strong> Si \(w_1\) es un valor particular de \(\arcsin z\) (correspondiente a una rama del logaritmo y una rama de la raíz cuadrada), entonces cualquier otro valor difiere por:</p>
+          <div class="math-container">
+            \[
+            w = w_1 + 2n\pi, \quad n \in \mathbb{Z}
+            \]
+            <p>debido a que \(-i \cdot 2k\pi i = 2k\pi\).</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 3:</strong> Además, la raíz cuadrada introduce otra rama. Consideremos el signo opuesto en la expresión \(iz \pm \sqrt{1 - z^2}\).</p>
+          <p>Si \(w_1\) corresponde al signo \(+\) (es decir, \(e^{iw_1} = iz + \sqrt{1 - z^2}\)), y sea \(w'\) tal que \(e^{iw'} = iz - \sqrt{1 - z^2}\). Entonces:</p>
+          <div class="math-container">
+            \[
+            iz - \sqrt{1 - z^2} = \frac{-1}{iz + \sqrt{1 - z^2}} = - e^{-iw_1}
+            \]
+            \[
+            e^{iw'} = - e^{-iw_1} = e^{i\pi} e^{-iw_1} = e^{i(\pi - w_1)}
+            \]
+            Por lo tanto,
+            \[
+            w' = \pi - w_1 + 2n\pi, \quad n \in \mathbb{Z}
+            \]
+          </div>
+        </div>
+
+        <div class="step">
+          <p><strong>Paso 4:</strong> Combinando ambas, todos los valores de \(\arcsin z\) son de la forma:</p>
+          <div class="result-box">
+            \[
+            \boxed{w = w_1 + 2n\pi \quad \text{y} \quad w = \pi - w_1 + 2n\pi, \quad n = 0, \pm 1, \pm 2, \dots}
+            \]
+          </div>
+          <p>Esto muestra que \(\arcsin z\) es infinitamente multivaluado.</p>
+        </div>
+
+        <div class="multivalue-note">
+          <h4>Valor principal de \(\arcsin z\)</h4>
+          <p>El valor principal de \(w = u + iv = \arcsin z\) se define como aquel que satisface:</p>
+          <div class="math-container">
+            \[
+            -\frac{\pi}{2} \leq u \leq \frac{\pi}{2} \ \text{si} \ v \geq 0, \quad
+            -\frac{\pi}{2} < u < \frac{\pi}{2} \ \text{si} \ v < 0
+            \]
+          </div>
+          <p>Esto selecciona una rama particular entre las infinitas posibilidades.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1rem; background: #e7f3ff; border-left: 4px solid #2196F3; border-radius: 4px;">
+        <h4 style="color: #2196F3; margin-top: 0;">Resumen</h4>
+        <p>Todas las funciones inversas trigonométricas e hiperbólicas en el plano complejo pueden expresarse en términos del logaritmo complejo, lo que las hace inherentemente multivaluadas. Las fórmulas demostradas son fundamentales para el análisis complejo y tienen aplicaciones en la integración de funciones complejas y en la resolución de ecuaciones.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

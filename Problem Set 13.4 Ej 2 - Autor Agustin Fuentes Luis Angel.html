@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Ejercicios de Análisis Complejo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Soluciones de Ejercicios de Análisis Complejo</h1>
+        <p>Ejercicios resueltos sobre ecuaciones de Cauchy-Riemann y funciones armónicas</p>
+    </div>
+    
+    <!-- Ejercicio 2 -->
+    <div class="exercise-container">
+        <h2 class="exercise-title">
+            <span class="exercise-number">2</span>
+            Analiticidad de \( f(z) = iz\bar{z} \)
+        </h2>
+        
+        <div class="problem-statement">
+            <strong>Problema:</strong> Determinar si la función \( f(z) = iz\bar{z} \) es analítica usando las ecuaciones de Cauchy-Riemann.
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Expresar \( f(z) \) en términos de \( x \) e \( y \)
+            </div>
+            <p>Sea \( z = x + iy \), entonces \( \bar{z} = x - iy \).</p>
+            <div class="formula">
+                \( z\bar{z} = (x+iy)(x-iy) = x^2 + y^2 \)
+            </div>
+            <p>Por lo tanto:</p>
+            <div class="formula">
+                \( f(z) = i(x^2 + y^2) \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Identificar las partes real e imaginaria
+            </div>
+            <p>Expresamos \( f(z) = u(x,y) + iv(x,y) \):</p>
+            <div class="formula">
+                \( u(x,y) = 0 \)<br>
+                \( v(x,y) = x^2 + y^2 \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Calcular las derivadas parciales
+            </div>
+            <div class="formula">
+                \( u_x = 0, \quad u_y = 0 \)<br>
+                \( v_x = 2x, \quad v_y = 2y \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Verificar las ecuaciones de Cauchy-Riemann
+            </div>
+            <p>Las ecuaciones de Cauchy-Riemann son:</p>
+            <div class="formula">
+                \( u_x = v_y \) y \( u_y = -v_x \)
+            </div>
+            <p>Verificamos la primera condición:</p>
+            <div class="formula">
+                \( u_x = 0, \quad v_y = 2y \Rightarrow 0 = 2y \) solo si \( y = 0 \)
+            </div>
+            <p>Verificamos la segunda condición:</p>
+            <div class="formula">
+                \( u_y = 0, \quad -v_x = -2x \Rightarrow 0 = -2x \) solo si \( x = 0 \)
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <div class="conclusion-title">
+                <span class="conclusion-icon">✓</span>
+                Conclusión
+            </div>
+            <p>Las ecuaciones de Cauchy-Riemann solo se satisfacen en el punto \( (0,0) \), pero no en ninguna vecindad alrededor de ese punto. Para que una función sea analítica, las ecuaciones deben satisfacerse en un conjunto abierto.</p>
+            <p>Por lo tanto, <span class="highlight">la función \( f(z) = iz\bar{z} \) <span class="false">NO es analítica</span></span> (excepto únicamente en el punto \( z = 0 \), pero esto no es suficiente para considerarla analítica).</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Ejercicios de Análisis Complejo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Soluciones de Ejercicios de Análisis Complejo</h1>
+        <p>Ejercicios resueltos sobre ecuaciones de Cauchy-Riemann y funciones armónicas</p>
+    </div>
+    <!-- Ejercicio 12 -->
+    <div class="exercise-container">
+        <h2 class="exercise-title">
+            <span class="exercise-number">12</span>
+            Función armónica \( u = x^2 + y^2 \)
+        </h2>
+        
+        <div class="problem-statement">
+            <strong>Problema:</strong> Determinar si la función \( u = x^2 + y^2 \) es armónica y, en caso afirmativo, encontrar una función analítica correspondiente \( f(z) = u(x,y) + iv(x,y) \).
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Verificar si \( u \) es armónica
+            </div>
+            <p>Una función es armónica si satisface la ecuación de Laplace: \( u_{xx} + u_{yy} = 0 \).</p>
+            <div class="formula">
+                \( u_x = 2x \Rightarrow u_{xx} = 2 \)<br>
+                \( u_y = 2y \Rightarrow u_{yy} = 2 \)
+            </div>
+            <p>Entonces:</p>
+            <div class="formula">
+                \( u_{xx} + u_{yy} = 2 + 2 = 4 \neq 0 \)
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <div class="conclusion-title">
+                <span class="conclusion-icon">✓</span>
+                Conclusión
+            </div>
+            <p>La función \( u = x^2 + y^2 \) <span class="false">NO satisface la ecuación de Laplace</span>, por lo tanto <span class="false">NO es armónica</span>.</p>
+            <p>Como consecuencia, no puede ser la parte real de una función analítica (a menos que la función no sea analítica).</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Soluciones completas de ejercicios de análisis complejo</p>
+        <p>Ecuaciones de Cauchy-Riemann y funciones armónicas</p>
+    </div>
+</body>
+</html>

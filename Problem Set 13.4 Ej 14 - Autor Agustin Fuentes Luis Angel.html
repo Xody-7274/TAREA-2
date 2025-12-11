@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Ejercicios de Análisis Complejo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Soluciones de Ejercicios de Análisis Complejo</h1>
+        <p>Ejercicios resueltos sobre ecuaciones de Cauchy-Riemann y funciones armónicas</p>
+    </div>
+
+    <!-- Ejercicio 14 -->
+    <div class="exercise-container">
+        <h2 class="exercise-title">
+            <span class="exercise-number">14</span>
+            Función armónica \( v = xy \)
+        </h2>
+        
+        <div class="problem-statement">
+            <strong>Problema:</strong> Determinar si la función \( v = xy \) es armónica y, en caso afirmativo, encontrar una función analítica correspondiente \( f(z) = u(x,y) + iv(x,y) \).
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Verificar si \( v \) es armónica
+            </div>
+            <p>Una función es armónica si satisface la ecuación de Laplace: \( v_{xx} + v_{yy} = 0 \).</p>
+            <div class="formula">
+                \( v_x = y \Rightarrow v_{xx} = 0 \)<br>
+                \( v_y = x \Rightarrow v_{yy} = 0 \)
+            </div>
+            <p>Entonces:</p>
+            <div class="formula">
+                \( v_{xx} + v_{yy} = 0 + 0 = 0 \)
+            </div>
+            <p>Por lo tanto, \( v \) es armónica.</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Encontrar la función \( u \) usando las ecuaciones de Cauchy-Riemann
+            </div>
+            <p>Para que \( f = u + iv \) sea analítica, debe cumplir:</p>
+            <div class="formula">
+                \( u_x = v_y = x \)<br>
+                \( u_y = -v_x = -y \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Integrar \( u_x \) respecto a \( x \)
+            </div>
+            <div class="formula">
+                \( u = \int u_x \, dx = \int x \, dx = \frac{1}{2}x^2 + g(y) \)
+            </div>
+            <p>donde \( g(y) \) es una función que depende solo de \( y \).</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Determinar \( g(y) \) usando \( u_y \)
+            </div>
+            <p>Derivamos \( u \) respecto a \( y \):</p>
+            <div class="formula">
+                \( u_y = g'(y) \)
+            </div>
+            <p>Pero por la segunda ecuación de Cauchy-Riemann, \( u_y = -y \), entonces:</p>
+            <div class="formula">
+                \( g'(y) = -y \Rightarrow g(y) = -\frac{1}{2}y^2 + C \)
+            </div>
+            <p>donde \( C \) es una constante real.</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">5</span>
+                Escribir la función \( u \) completa
+            </div>
+            <div class="formula">
+                \( u(x,y) = \frac{1}{2}x^2 - \frac{1}{2}y^2 + C = \frac{1}{2}(x^2 - y^2) + C \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">6</span>
+                Expresar la función analítica \( f(z) \)
+            </div>
+            <div class="formula">
+                \( f(z) = u(x,y) + iv(x,y) = \frac{1}{2}(x^2 - y^2) + C + i(xy) \)
+            </div>
+            <p>Podemos reescribir esto como:</p>
+            <div class="formula">
+                \( f(z) = \frac{1}{2}(x^2 - y^2 + 2ixy) + C = \frac{1}{2}(x^2 + 2ixy - y^2) + C \)
+            </div>
+            <p>Reconocemos que \( (x + iy)^2 = x^2 + 2ixy - y^2 \), por lo tanto:</p>
+            <div class="formula">
+                \( f(z) = \frac{1}{2}z^2 + C \)
+            </div>
+            <p>donde \( C \) es una constante real.</p>
+        </div>
+        
+        <div class="conclusion">
+            <div class="conclusion-title">
+                <span class="conclusion-icon">✓</span>
+                Conclusión
+            </div>
+            <p>La función \( v = xy \) <span class="true">SÍ es armónica</span>. La función analítica correspondiente es:</p>
+            <div class="formula">
+                \( f(z) = \frac{1}{2}z^2 + C \)
+            </div>
+            <p>donde \( C \) es una constante real.</p>
+        </div>
+    </div>
+</body>
+</html>

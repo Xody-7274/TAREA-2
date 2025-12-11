@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Ejercicios de Análisis Complejo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Soluciones de Ejercicios de Análisis Complejo</h1>
+        <p>Ejercicios resueltos sobre ecuaciones de Cauchy-Riemann y funciones armónicas</p>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="exercise-container">
+        <h2 class="exercise-title">
+            <span class="exercise-number">3</span>
+            Analiticidad de \( f(z) = e^{-2x}(\cos 2y - i\sin 2y) \)
+        </h2>
+        
+        <div class="problem-statement">
+            <strong>Problema:</strong> Determinar si la función \( f(z) = e^{-2x}(\cos 2y - i\sin 2y) \) es analítica usando las ecuaciones de Cauchy-Riemann.
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Identificar las partes real e imaginaria
+            </div>
+            <p>Expresamos \( f(z) = u(x,y) + iv(x,y) \):</p>
+            <div class="formula">
+                \( u(x,y) = e^{-2x}\cos 2y \)<br>
+                \( v(x,y) = -e^{-2x}\sin 2y \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Calcular las derivadas parciales
+            </div>
+            <div class="formula">
+                \( u_x = -2e^{-2x}\cos 2y \)<br>
+                \( u_y = -2e^{-2x}\sin 2y \)<br>
+                \( v_x = 2e^{-2x}\sin 2y \)<br>
+                \( v_y = -2e^{-2x}\cos 2y \)
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                Verificar las ecuaciones de Cauchy-Riemann
+            </div>
+            <p>Primera condición: \( u_x = v_y \)</p>
+            <div class="formula">
+                \( u_x = -2e^{-2x}\cos 2y, \quad v_y = -2e^{-2x}\cos 2y \) → Se cumple
+            </div>
+            <p>Segunda condición: \( u_y = -v_x \)</p>
+            <div class="formula">
+                \( u_y = -2e^{-2x}\sin 2y, \quad -v_x = -2e^{-2x}\sin 2y \) → Se cumple
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">4</span>
+                Verificar continuidad de las derivadas
+            </div>
+            <p>Todas las derivadas parciales son continuas en todo el plano complejo, ya que son productos de funciones exponenciales y trigonométricas que son continuas en todas partes.</p>
+        </div>
+        
+        <div class="conclusion">
+            <div class="conclusion-title">
+                <span class="conclusion-icon">✓</span>
+                Conclusión
+            </div>
+            <p>La función satisface las ecuaciones de Cauchy-Riemann en todo el plano complejo y sus derivadas parciales son continuas.</p>
+            <p>Por lo tanto, <span class="highlight">la función \( f(z) = e^{-2x}(\cos 2y - i\sin 2y) \) <span class="true">SÍ es analítica</span></span> en todo el plano complejo.</p>
+        </div>
+    </div>
+</body>
+</html>
