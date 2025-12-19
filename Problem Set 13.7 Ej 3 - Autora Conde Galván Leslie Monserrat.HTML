@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Set 13.7 - Conde Galván Leslie Monserrat</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root { --main-color: #8B4513; --bg-color: #fdfbf7; --header-border: #8B4513; }
+        body { font-family: "Segoe UI", Arial, sans-serif; color: var(--main-color); background-color: var(--bg-color); margin: 0; padding: 40px; line-height: 1.6; }
+        .page { background-color: #fff; padding: 40px; box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1); border: 1px solid rgba(139, 69, 19, 0.1); max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--header-border); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 24px; margin: 5px 0; text-transform: uppercase; }
+        h2 { font-size: 20px; margin-top: 5px; font-weight: normal; }
+        h3 { border-left: 5px solid var(--main-color); padding-left: 10px; margin-top: 20px; font-size: 22px; text-transform: uppercase; color: var(--main-color); }
+        .problem-statement { font-weight: bold; font-style: italic; margin-bottom: 15px; background-color: rgba(139, 69, 19, 0.05); padding: 10px; border-radius: 5px; }
+        .step-title { font-weight: bold; text-decoration: underline; margin-top: 15px; margin-bottom: 5px; color: #5c2e0c; }
+        .result-box { border: 2px solid var(--main-color); padding: 15px; margin-top: 20px; text-align: center; font-weight: bold; background-color: #fff8f0; }
+        .math { color: var(--main-color); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Conde Galván Leslie Monserrat</h1>
+            <h2>Grupo: 4CV6</h2>
+            <p>Variable Compleja | Problem Set 13.7</p>
+        </header>
+
+        <h3>NÚMEROS COMPLEJOS Y FUNCIONES</h3>
+
+        <div class="exercise-box">
+            <div class="problem-statement">
+                Ejercicio 3: Demuestre la analiticidad de \( Ln \, z \) mediante las ecuaciones de Cauchy-Riemann en forma polar.
+            </div>
+
+            <p><strong>Procedimiento:</strong></p>
+            <p>Consideramos la función logaritmo complejo principal en su forma polar \( z = r e^{i\theta} \), donde \( r > 0 \) y \( -\pi < \theta \leq \pi \).</p>
+
+            <div class="step-title">1. Definición de la función</div>
+            <div class="math">
+                $$ f(z) = Ln \, z = \ln r + i\theta $$
+            </div>
+
+            <div class="step-title">2. Identificación de \( u \) y \( v \)</div>
+            <p>Separamos la parte real e imaginaria en términos de \( r \) y \( \theta \):</p>
+            <div class="math">
+                $$ u(r, \theta) = \ln r, \quad v(r, \theta) = \theta $$
+            </div>
+
+            <div class="step-title">3. Ecuaciones de Cauchy-Riemann en forma polar</div>
+            <p>Para que la función sea analítica, deben cumplirse las siguientes condiciones:</p>
+            <div class="math">
+                $$ \frac{\partial u}{\partial r} = \frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text{y} \quad \frac{\partial v}{\partial r} = -\frac{1}{r} \frac{\partial u}{\partial \theta} $$
+            </div>
+
+            <div class="step-title">4. Cálculo de derivadas parciales</div>
+            <div class="math">
+                $$ \frac{\partial u}{\partial r} = \frac{\partial}{\circ \partial r}(\ln r) = \frac{1}{r} $$
+                $$ \frac{\partial u}{\partial \theta} = \frac{\partial}{\partial \theta}(\ln r) = 0 $$
+                $$ \frac{\partial v}{\partial r} = \frac{\partial}{\partial r}(\theta) = 0 $$
+                $$ \frac{\partial v}{\partial \theta} = \frac{\partial}{\partial \theta}(\theta) = 1 $$
+            </div>
+
+            <div class="step-title">5. Verificación de las ecuaciones</div>
+            <p>Sustituimos los valores obtenidos en las ecuaciones del paso 3:</p>
+            <div class="math">
+                $$ \frac{1}{r} = \frac{1}{r}(1) \implies \frac{1}{r} = \frac{1}{r} \quad (\text{Se cumple}) $$
+                $$ 0 = -\frac{1}{r}(0) \implies 0 = 0 \quad (\text{Se cumple}) $$
+            </div>
+
+            <div class="result-box">
+                Resultado (Demostración):<br>
+                Como las derivadas parciales son continuas y satisfacen las ecuaciones de Cauchy-Riemann para \( r > 0 \), la función \( Ln \, z \) es analítica en su dominio (excluyendo el origen y el corte de rama).
+                <br><br>
+                <em>Q.E.D.</em>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

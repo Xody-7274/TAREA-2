@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Set 13.7 - Conde Galván Leslie Monserrat</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root { --main-color: #8B4513; --bg-color: #fdfbf7; --header-border: #8B4513; }
+        body { font-family: "Segoe UI", Arial, sans-serif; color: var(--main-color); background-color: var(--bg-color); margin: 0; padding: 40px; line-height: 1.6; }
+        .page { background-color: #fff; padding: 40px; box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1); border: 1px solid rgba(139, 69, 19, 0.1); max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--header-border); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 24px; margin: 5px 0; text-transform: uppercase; color: var(--main-color); }
+        h2 { font-size: 20px; margin-top: 5px; font-weight: normal; color: var(--main-color); }
+        h3 { border-left: 5px solid var(--main-color); padding-left: 10px; margin-top: 20px; font-size: 22px; text-transform: uppercase; color: var(--main-color); }
+        .problem-statement { font-weight: bold; font-style: italic; margin-bottom: 15px; background-color: rgba(139, 69, 19, 0.05); padding: 10px; border-radius: 5px; }
+        .step-title { font-weight: bold; text-decoration: underline; margin-top: 15px; margin-bottom: 5px; color: #5c2e0c; }
+        .result-box { border: 2px solid var(--main-color); padding: 15px; margin-top: 20px; text-align: center; font-weight: bold; background-color: #fff8f0; }
+        .math-color { color: var(--main-color); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Conde Galván Leslie Monserrat</h1>
+            <h2>Grupo: 4CV6</h2>
+            <p>Variable Compleja | Problem Set 13.7</p>
+        </header>
+
+        <h3>NÚMEROS COMPLEJOS Y FUNCIONES</h3>
+
+        <div class="exercise-box">
+            <div class="problem-statement">
+                Ejercicio 1: Verificación de las computaciones presentadas en el Ejemplo 1 para el Logaritmo Natural y su Valor Principal.
+            </div>
+
+            <p><strong>Procedimiento de Verificación:</strong> Usamos la fórmula \( Ln \, z = \ln |z| + i Arg(z) \).</p>
+
+            <div class="step-title">1. Verificación para \( z = 1 \) y \( z = 4 \)</div>
+            <div class="math-color">
+                $$ Ln(1) = \ln(1) + i(0) = 0 $$
+                $$ Ln(4) = \ln(4) \approx 1.386294 $$
+            </div>
+
+            <div class="step-title">2. Verificación para \( z = -1 \) y \( z = -4 \)</div>
+            <p>Como están en el eje real negativo, \( Arg(z) = \pi \):</p>
+            <div class="math-color">
+                $$ Ln(-1) = \ln(1) + \pi i = \pi i $$
+                $$ Ln(-4) = \ln(4) + \pi i \approx 1.386294 + 3.141592i $$
+            </div>
+
+            <div class="step-title">3. Verificación para potencias de \( i \) (\( i, 4i, -4i \))</div>
+            <div class="math-color">
+                $$ Ln(i) = \ln(1) + \frac{\pi}{2}i = \frac{\pi}{2}i $$
+                $$ Ln(4i) = \ln(4) + \frac{\pi}{2}i \approx 1.386294 + 1.570796i $$
+                $$ Ln(-4i) = \ln(4) - \frac{\pi}{2}i \approx 1.386294 - 1.570796i $$
+            </div>
+
+            <div class="step-title">4. Verificación para \( z = 3 - 4i \)</div>
+            <p>Cálculo de módulo y argumento:</p>
+            <div class="math-color">
+                $$ |z| = \sqrt{3^2 + (-4)^2} = 5 \implies \ln(5) \approx 1.609438 $$
+                $$ Arg(3-4i) = \arctan\left(\frac{-4}{3}\right) \approx -0.927295 \, \text{rad} $$
+                $$ Ln(3-4i) \approx 1.609438 - 0.927295i $$
+            </div>
+
+            <div class="result-box">
+                Conclusión:<br>
+                Los valores calculados coinciden con los resultados mostrados en la tabla del Ejemplo 1, validando el uso de la rama principal para el logaritmo complejo.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

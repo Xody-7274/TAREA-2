@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 - Set 13.5 - Ramírez Lozano Gael Martín</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root { --main-color: #8B4513; --bg-color: #fdfbf7; --header-border: #8B4513; }
+        body { font-family: "Segoe UI", Arial, sans-serif; color: var(--main-color); background-color: var(--bg-color); margin: 0; padding: 40px; line-height: 1.6; }
+        .page { background-color: #fff; padding: 40px; box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1); border: 1px solid rgba(139, 69, 19, 0.1); max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--header-border); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 24px; margin: 5px 0; text-transform: uppercase; }
+        h2 { font-size: 20px; margin-top: 5px; font-weight: normal; }
+        h3 { border-left: 5px solid var(--main-color); padding-left: 10px; margin-top: 20px; font-size: 22px; text-transform: uppercase; }
+        .problem-statement { font-weight: bold; font-style: italic; margin-bottom: 15px; background-color: rgba(139, 69, 19, 0.05); padding: 10px; border-radius: 5px; }
+        .step-title { font-weight: bold; text-decoration: underline; margin-top: 15px; margin-bottom: 5px; color: #5c2e0c; }
+        .result-box { border: 2px solid var(--main-color); padding: 15px; margin-top: 20px; text-align: center; font-weight: bold; background-color: #fff8f0; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Ramírez Lozano Gael Martín</h1>
+            <h2>Grupo: 4CV6</h2>
+            <p>Variable Compleja | Problem Set 13.5</p>
+        </header>
+
+        <h3>SET 13.5: La Función Exponencial</h3>
+
+        <div class="exercise-box">
+            <div class="problem-statement">
+                Ejercicio 8 (Polar Form): Escriba en forma exponencial.
+                <br>
+                <em>Nota: Se evalúa \( e^z \) para el caso representativo \( z = 2 + 3\pi i \).</em>
+            </div>
+
+            <p><strong>Procedimiento:</strong></p>
+            <p>Sabemos que para un número complejo \( z = x + iy \), la función exponencial se define como:</p>
+            $$ e^z = e^{x+iy} = e^x (\cos y + i \sin y) $$
+            <p>La forma polar de un número complejo \( w \) es \( w = r e^{i\theta} \), donde \( r = |w| \) y \( \theta = \arg(w) \).</p>
+
+            <div class="step-title">1. Identificar partes real e imaginaria</div>
+            <p>Dado \( z = 2 + 3\pi i \), tenemos:</p>
+            $$ x = 2, \quad y = 3\pi $$
+
+            <div class="step-title">2. Aplicar la fórmula de Euler</div>
+            $$ e^z = e^2 (\cos(3\pi) + i \sin(3\pi)) $$
+            <p>Evaluamos las funciones trigonométricas:</p>
+            $$ \cos(3\pi) = -1, \quad \sin(3\pi) = 0 $$
+
+            <div class="step-title">3. Calcular el resultado rectangular</div>
+            $$ e^z = e^2 (-1 + 0i) = -e^2 $$
+
+            <div class="step-title">4. Escribir en forma exponencial (Polar)</div>
+            <p>El número resultante es un número real negativo \( -e^2 \). Para escribirlo en la forma \( r e^{i\phi} \):</p>
+            <ul>
+                <li>Módulo \( r = |-e^2| = e^2 \)</li>
+                <li>Argumento \( \phi = \pi \) (ya que está en el eje real negativo)</li>
+            </ul>
+            
+            <div class="result-box">
+                Resultado:<br>
+                $$ e^z = e^2 e^{i\pi} $$
+            </div>
+        </div>
+    </div>
+</body>
+</html>

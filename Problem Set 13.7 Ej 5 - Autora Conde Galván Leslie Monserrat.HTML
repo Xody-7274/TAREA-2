@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Set 13.7 - Conde Galván Leslie Monserrat</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root { --main-color: #8B4513; --bg-color: #fdfbf7; --header-border: #8B4513; }
+        body { font-family: "Segoe UI", Arial, sans-serif; color: var(--main-color); background-color: var(--bg-color); margin: 0; padding: 40px; line-height: 1.6; }
+        .page { background-color: #fff; padding: 40px; box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1); border: 1px solid rgba(139, 69, 19, 0.1); max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--header-border); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 24px; margin: 5px 0; text-transform: uppercase; }
+        h2 { font-size: 20px; margin-top: 5px; font-weight: normal; }
+        h3 { border-left: 5px solid var(--main-color); padding-left: 10px; margin-top: 20px; font-size: 22px; text-transform: uppercase; color: var(--main-color); }
+        .problem-statement { font-weight: bold; font-style: italic; margin-bottom: 15px; background-color: rgba(139, 69, 19, 0.05); padding: 10px; border-radius: 5px; }
+        .step-title { font-weight: bold; text-decoration: underline; margin-top: 15px; margin-bottom: 5px; color: #5c2e0c; }
+        .result-box { border: 2px solid var(--main-color); padding: 15px; margin-top: 20px; text-align: center; font-weight: bold; background-color: #fff8f0; }
+        .math { color: var(--main-color); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Conde Galván Leslie Monserrat</h1>
+            <h2>Grupo: 4CV6</h2>
+            <p>Variable Compleja | Problem Set 13.7</p>
+        </header>
+
+        <h3>NÚMEROS COMPLEJOS Y FUNCIONES</h3>
+
+        <div class="exercise-box">
+            <div class="problem-statement">
+                Ejercicio 5: Encuentre el valor principal \( Ln \, z \) cuando \( z = -11 \).
+            </div>
+
+            <p><strong>Procedimiento:</strong></p>
+            <p>Para hallar el logaritmo complejo principal, utilizaremos la definición basada en el módulo y el argumento principal del número complejo.</p>
+
+            <div class="step-title">1. Definición del Logaritmo Principal</div>
+            <div class="math">
+                $$ Ln \, z = \ln |z| + i Arg(z) $$
+            </div>
+
+            <div class="step-title">2. Identificación del número complejo</div>
+            <p>El número dado es puramente real y negativo:</p>
+            <div class="math">
+                $$ z = -11 + 0i $$
+            </div>
+
+            <div class="step-title">3. Cálculo del módulo \( |z| \)</div>
+            <div class="math">
+                $$ |z| = \sqrt{(-11)^2 + 0^2} = 11 $$
+            </div>
+
+            <div class="step-title">4. Cálculo del argumento principal \( Arg(z) \)</div>
+            <p>Dado que el punto se encuentra sobre el eje real negativo en el plano complejo, su ángulo medido desde el semieje positivo es:</p>
+            <div class="math">
+                $$ Arg(z) = \pi $$
+            </div>
+
+            <div class="step-title">5. Sustitución en la fórmula</div>
+            <div class="math">
+                $$ Ln(-11) = \ln(11) + i\pi $$
+            </div>
+
+            <div class="result-box">
+                Resultado:<br>
+                <div class="math">
+                    $$ Ln(-11) \approx 2.3978 + 3.1415i $$
+                </div>
+                O en términos exactos:<br>
+                <div class="math">
+                    $$ Ln(-11) = \ln 11 + \pi i $$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

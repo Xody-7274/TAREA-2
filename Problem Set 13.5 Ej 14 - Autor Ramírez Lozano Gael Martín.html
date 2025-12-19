@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Set 13.5 - Ramírez Lozano Gael Martín</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root { --main-color: #8B4513; --bg-color: #fdfbf7; --header-border: #8B4513; }
+        body { font-family: "Segoe UI", Arial, sans-serif; color: var(--main-color); background-color: var(--bg-color); margin: 0; padding: 40px; line-height: 1.6; }
+        .page { background-color: #fff; padding: 40px; box-shadow: 0 4px 10px rgba(139, 69, 19, 0.1); border: 1px solid rgba(139, 69, 19, 0.1); max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--header-border); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        h1 { font-size: 24px; margin: 5px 0; text-transform: uppercase; }
+        h2 { font-size: 20px; margin-top: 5px; font-weight: normal; }
+        h3 { border-left: 5px solid var(--main-color); padding-left: 10px; margin-top: 20px; font-size: 22px; text-transform: uppercase; }
+        .problem-statement { font-weight: bold; font-style: italic; margin-bottom: 15px; background-color: rgba(139, 69, 19, 0.05); padding: 10px; border-radius: 5px; }
+        .step-title { font-weight: bold; text-decoration: underline; margin-top: 15px; margin-bottom: 5px; color: #5c2e0c; }
+        .result-box { border: 2px solid var(--main-color); padding: 15px; margin-top: 20px; text-align: center; font-weight: bold; background-color: #fff8f0; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Ramírez Lozano Gael Martín</h1>
+            <h2>Grupo: 4CV6</h2>
+            <p>Variable Compleja | Problem Set 13.5</p>
+        </header>
+
+        <h3>SET 13.5: La Función Exponencial</h3>
+
+        <div class="exercise-box">
+            <div class="problem-statement">
+                Ejercicio 14 (Real and Imaginary Parts): Encuentre Re e Im de \( e^{z^2} \).
+            </div>
+
+            <p><strong>Procedimiento:</strong></p>
+            <p>Queremos encontrar la parte real \( u \) y la parte imaginaria \( v \) de la función \( w = e^{z^2} \), donde \( z = x + iy \).</p>
+
+            <div class="step-title">1. Expandir \( z^2 \)</div>
+            $$ z^2 = (x + iy)^2 = x^2 + 2ixy + (iy)^2 = x^2 - y^2 + i(2xy) $$
+
+            <div class="step-title">2. Sustituir en la exponencial</div>
+            <p>Usando la propiedad \( e^{A+iB} = e^A e^{iB} \):</p>
+            $$ e^{z^2} = e^{(x^2 - y^2) + i(2xy)} = e^{x^2 - y^2} \cdot e^{i(2xy)} $$
+
+            <div class="step-title">3. Aplicar fórmula de Euler para separar Re e Im</div>
+            <p>Recordando que \( e^{i\theta} = \cos \theta + i \sin \theta \), donde aquí \( \theta = 2xy \):</p>
+            $$ e^{z^2} = e^{x^2 - y^2} [\cos(2xy) + i \sin(2xy)] $$
+            
+            <div class="step-title">4. Identificar componentes</div>
+            <p>Multiplicamos el factor exponencial real por cada término del paréntesis:</p>
+            $$ \text{Re}(e^{z^2}) = e^{x^2 - y^2} \cos(2xy) $$
+            $$ \text{Im}(e^{z^2}) = e^{x^2 - y^2} \sin(2xy) $$
+
+            <div class="result-box">
+                Resultado:<br>
+                $$ \text{Re} = e^{x^2 - y^2} \cos(2xy) $$
+                $$ \text{Im} = e^{x^2 - y^2} \sin(2xy) $$
+            </div>
+        </div>
+    </div>
+</body>
+</html>
